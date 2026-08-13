@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Facebook, Instagram, Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 import logo from "@/assets/logo-castelo.png";
 import { Button } from "@/components/ui/button";
-import { navLinks, whatsappLink } from "@/content/site";
+import { navLinks, school, whatsappLink } from "@/content/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
