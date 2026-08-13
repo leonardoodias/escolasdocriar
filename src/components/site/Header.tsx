@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Facebook, Instagram, Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 import logo from "@/assets/logo-castelo.png";
 import { Button } from "@/components/ui/button";
-import { navLinks, whatsappLink } from "@/content/site";
+import { navLinks, school, whatsappLink } from "@/content/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -52,6 +52,36 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2 xl:ml-2">
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
+          >
+            <a
+              href={school.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da escola"
+            >
+              <Instagram className="size-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
+          >
+            <a
+              href={school.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook da escola"
+            >
+              <Facebook className="size-5" />
+            </a>
+          </Button>
           <Button
             asChild
             variant="outline"
@@ -113,6 +143,38 @@ export function Header() {
                 <Link to="/matriculas" onClick={() => setOpen(false)}>
                   Agende uma visita
                 </Link>
+              </Button>
+            </li>
+            <li className="grid grid-cols-2 gap-3 pt-2">
+              <Button
+                asChild
+                variant="outline"
+                className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
+              >
+                <a
+                  href={school.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <Instagram className="mr-2 size-5" />
+                  Instagram
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
+              >
+                <a
+                  href={school.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <Facebook className="mr-2 size-5" />
+                  Facebook
+                </a>
               </Button>
             </li>
           </ul>
