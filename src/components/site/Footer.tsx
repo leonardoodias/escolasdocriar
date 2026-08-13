@@ -1,3 +1,4 @@
+import { ExternalLink } from "@/components/site/ExternalLink";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
@@ -30,24 +31,20 @@ export function Footer() {
             {school.address.city}. Conhecimento, afeto e criatividade em cada etapa.
           </p>
           <div className="mt-5 flex gap-3">
-            <a
+            <ExternalLink
               href={school.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Instagram da escola"
               className="grid size-11 place-items-center rounded-full bg-background text-primary shadow-soft transition-colors hover:bg-primary-soft"
             >
               <Instagram className="size-5" />
-            </a>
-            <a
+            </ExternalLink>
+            <ExternalLink
               href={school.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Facebook da escola"
               className="grid size-11 place-items-center rounded-full bg-background text-primary shadow-soft transition-colors hover:bg-primary-soft"
             >
               <Facebook className="size-5" />
-            </a>
+            </ExternalLink>
           </div>
         </div>
 
@@ -89,14 +86,12 @@ export function Footer() {
                 className="mt-0.5 size-4 shrink-0 text-accent"
                 aria-hidden="true"
               />
-              <a
+              <ExternalLink
                 href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="hover:text-primary"
               >
                 WhatsApp {school.whatsapp}
-              </a>
+              </ExternalLink>
             </li>
             <li className="flex gap-2">
               <Mail className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
