@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AEscolaRouteImport } from './routes/a-escola'
+import { Route as SegmentosRouteImport } from './routes/segmentos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AEscolaRoute = AEscolaRouteImport.update({
+  id: '/a-escola',
+  path: '/a-escola',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegmentosRoute = SegmentosRouteImport.update({
+  id: '/segmentos',
+  path: '/segmentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-escola': typeof AEscolaRoute
+  '/segmentos': typeof SegmentosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-escola': typeof AEscolaRoute
+  '/segmentos': typeof SegmentosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-escola': typeof AEscolaRoute
+  '/segmentos': typeof SegmentosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/a-escola' | '/segmentos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/a-escola' | '/segmentos'
+  id: '__root__' | '/' | '/a-escola' | '/segmentos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AEscolaRoute: typeof AEscolaRoute
+  SegmentosRoute: typeof SegmentosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-escola': {
+      id: '/a-escola'
+      path: '/a-escola'
+      fullPath: '/a-escola'
+      preLoaderRoute: typeof AEscolaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/segmentos': {
+      id: '/segmentos'
+      path: '/segmentos'
+      fullPath: '/segmentos'
+      preLoaderRoute: typeof SegmentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AEscolaRoute: AEscolaRoute,
+  SegmentosRoute: SegmentosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
