@@ -11,7 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AEscolaRouteImport } from './routes/a-escola'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as EducacaoInfantilRouteImport } from './routes/educacao-infantil'
+import { Route as EnsinoFundamentalRouteImport } from './routes/ensino-fundamental'
+import { Route as EnsinoMedioRouteImport } from './routes/ensino-medio'
+import { Route as GaleriaRouteImport } from './routes/galeria'
+import { Route as MatriculasRouteImport } from './routes/matriculas'
+import { Route as NossaPropostaRouteImport } from './routes/nossa-proposta'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as SegmentosRouteImport } from './routes/segmentos'
+import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as NoticiasIndexRouteImport } from './routes/noticias.index'
+import { Route as NoticiasSlugRouteImport } from './routes/noticias.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,40 +35,194 @@ const AEscolaRoute = AEscolaRouteImport.update({
   path: '/a-escola',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EducacaoInfantilRoute = EducacaoInfantilRouteImport.update({
+  id: '/educacao-infantil',
+  path: '/educacao-infantil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnsinoFundamentalRoute = EnsinoFundamentalRouteImport.update({
+  id: '/ensino-fundamental',
+  path: '/ensino-fundamental',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnsinoMedioRoute = EnsinoMedioRouteImport.update({
+  id: '/ensino-medio',
+  path: '/ensino-medio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaRoute = GaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatriculasRoute = MatriculasRouteImport.update({
+  id: '/matriculas',
+  path: '/matriculas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NossaPropostaRoute = NossaPropostaRouteImport.update({
+  id: '/nossa-proposta',
+  path: '/nossa-proposta',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosRoute = ProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SegmentosRoute = SegmentosRouteImport.update({
   id: '/segmentos',
   path: '/segmentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasIndexRoute = NoticiasIndexRouteImport.update({
+  id: '/noticias/',
+  path: '/noticias/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasSlugRoute = NoticiasSlugRouteImport.update({
+  id: '/noticias/$slug',
+  path: '/noticias/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
+  '/contato': typeof ContatoRoute
+  '/educacao-infantil': typeof EducacaoInfantilRoute
+  '/ensino-fundamental': typeof EnsinoFundamentalRoute
+  '/ensino-medio': typeof EnsinoMedioRoute
+  '/galeria': typeof GaleriaRoute
+  '/matriculas': typeof MatriculasRoute
+  '/nossa-proposta': typeof NossaPropostaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
+  '/noticias/': typeof NoticiasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
+  '/contato': typeof ContatoRoute
+  '/educacao-infantil': typeof EducacaoInfantilRoute
+  '/ensino-fundamental': typeof EnsinoFundamentalRoute
+  '/ensino-medio': typeof EnsinoMedioRoute
+  '/galeria': typeof GaleriaRoute
+  '/matriculas': typeof MatriculasRoute
+  '/nossa-proposta': typeof NossaPropostaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
+  '/noticias': typeof NoticiasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
+  '/contato': typeof ContatoRoute
+  '/educacao-infantil': typeof EducacaoInfantilRoute
+  '/ensino-fundamental': typeof EnsinoFundamentalRoute
+  '/ensino-medio': typeof EnsinoMedioRoute
+  '/galeria': typeof GaleriaRoute
+  '/matriculas': typeof MatriculasRoute
+  '/nossa-proposta': typeof NossaPropostaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
+  '/noticias/': typeof NoticiasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-escola' | '/segmentos'
+  fullPaths:
+    | '/'
+    | '/a-escola'
+    | '/contato'
+    | '/educacao-infantil'
+    | '/ensino-fundamental'
+    | '/ensino-medio'
+    | '/galeria'
+    | '/matriculas'
+    | '/nossa-proposta'
+    | '/politica-de-privacidade'
+    | '/projetos'
+    | '/segmentos'
+    | '/termos-de-uso'
+    | '/noticias/$slug'
+    | '/noticias/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-escola' | '/segmentos'
-  id: '__root__' | '/' | '/a-escola' | '/segmentos'
+  to:
+    | '/'
+    | '/a-escola'
+    | '/contato'
+    | '/educacao-infantil'
+    | '/ensino-fundamental'
+    | '/ensino-medio'
+    | '/galeria'
+    | '/matriculas'
+    | '/nossa-proposta'
+    | '/politica-de-privacidade'
+    | '/projetos'
+    | '/segmentos'
+    | '/termos-de-uso'
+    | '/noticias/$slug'
+    | '/noticias'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-escola'
+    | '/contato'
+    | '/educacao-infantil'
+    | '/ensino-fundamental'
+    | '/ensino-medio'
+    | '/galeria'
+    | '/matriculas'
+    | '/nossa-proposta'
+    | '/politica-de-privacidade'
+    | '/projetos'
+    | '/segmentos'
+    | '/termos-de-uso'
+    | '/noticias/$slug'
+    | '/noticias/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AEscolaRoute: typeof AEscolaRoute
+  ContatoRoute: typeof ContatoRoute
+  EducacaoInfantilRoute: typeof EducacaoInfantilRoute
+  EnsinoFundamentalRoute: typeof EnsinoFundamentalRoute
+  EnsinoMedioRoute: typeof EnsinoMedioRoute
+  GaleriaRoute: typeof GaleriaRoute
+  MatriculasRoute: typeof MatriculasRoute
+  NossaPropostaRoute: typeof NossaPropostaRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  ProjetosRoute: typeof ProjetosRoute
   SegmentosRoute: typeof SegmentosRoute
+  TermosDeUsoRoute: typeof TermosDeUsoRoute
+  NoticiasSlugRoute: typeof NoticiasSlugRoute
+  NoticiasIndexRoute: typeof NoticiasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +241,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AEscolaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/educacao-infantil': {
+      id: '/educacao-infantil'
+      path: '/educacao-infantil'
+      fullPath: '/educacao-infantil'
+      preLoaderRoute: typeof EducacaoInfantilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ensino-fundamental': {
+      id: '/ensino-fundamental'
+      path: '/ensino-fundamental'
+      fullPath: '/ensino-fundamental'
+      preLoaderRoute: typeof EnsinoFundamentalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ensino-medio': {
+      id: '/ensino-medio'
+      path: '/ensino-medio'
+      fullPath: '/ensino-medio'
+      preLoaderRoute: typeof EnsinoMedioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria': {
+      id: '/galeria'
+      path: '/galeria'
+      fullPath: '/galeria'
+      preLoaderRoute: typeof GaleriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matriculas': {
+      id: '/matriculas'
+      path: '/matriculas'
+      fullPath: '/matriculas'
+      preLoaderRoute: typeof MatriculasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nossa-proposta': {
+      id: '/nossa-proposta'
+      path: '/nossa-proposta'
+      fullPath: '/nossa-proposta'
+      preLoaderRoute: typeof NossaPropostaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos': {
+      id: '/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/segmentos': {
       id: '/segmentos'
       path: '/segmentos'
       fullPath: '/segmentos'
       preLoaderRoute: typeof SegmentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias/': {
+      id: '/noticias/'
+      path: '/noticias'
+      fullPath: '/noticias/'
+      preLoaderRoute: typeof NoticiasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias/$slug': {
+      id: '/noticias/$slug'
+      path: '/noticias/$slug'
+      fullPath: '/noticias/$slug'
+      preLoaderRoute: typeof NoticiasSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -88,7 +338,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AEscolaRoute: AEscolaRoute,
+  ContatoRoute: ContatoRoute,
+  EducacaoInfantilRoute: EducacaoInfantilRoute,
+  EnsinoFundamentalRoute: EnsinoFundamentalRoute,
+  EnsinoMedioRoute: EnsinoMedioRoute,
+  GaleriaRoute: GaleriaRoute,
+  MatriculasRoute: MatriculasRoute,
+  NossaPropostaRoute: NossaPropostaRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  ProjetosRoute: ProjetosRoute,
   SegmentosRoute: SegmentosRoute,
+  TermosDeUsoRoute: TermosDeUsoRoute,
+  NoticiasSlugRoute: NoticiasSlugRoute,
+  NoticiasIndexRoute: NoticiasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
