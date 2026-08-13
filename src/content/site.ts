@@ -13,26 +13,25 @@ export const school = {
   tagline: "Educar é criar possibilidades para o futuro.",
   description:
     "Escola de Educação Infantil, Ensino Fundamental e Ensino Médio em Santa Rosa de Viterbo/SP. Conhecimento, afeto e criatividade em cada etapa da vida escolar.",
-  // EXEMPLO — substituir pelos dados oficiais da escola
-  phone: "(16) 0000-0000",
-  phoneHref: "tel:+551600000000",
-  whatsapp: "(16) 90000-0000",
-  whatsappNumber: "5516900000000",
+  phone: "(16) 99444-2252",
+  phoneHref: "tel:+5516994442252",
+  whatsapp: "(16) 99444-2252",
+  whatsappNumber: "5516994442252",
   email: "contato@castelodocriar.com.br",
   address: {
-    street: "Rua Coronel Garcia, 158 — Centro",
-    city: "Santa Rosa de Viterbo/SP",
-    zip: "CEP 14270-000",
+    street: "Rua Coronel Garcia, 158",
+    city: "Santa Rosa de Viterbo, São Paulo",
+    zip: "14270-000",
   },
   hours: "Segunda a sexta, das 7h às 18h",
   social: {
-    instagram: "https://instagram.com/castelo_do_criar",
-    facebook: "https://facebook.com/",
+    instagram: "https://instagram.com/castelodocriar",
+    facebook: "https://www.facebook.com/profile.php?id=61588620640733",
   },
   mapsEmbed:
-    "https://www.google.com/maps?q=Rua+Coronel+Garcia,+158+-+Centro,+Santa+Rosa+de+Viterbo+-+SP&output=embed",
+    "https://www.google.com/maps?q=Rua+Coronel+Garcia,+158,+Santa+Rosa+de+Viterbo,+Sao+Paulo,+14270-000&output=embed",
   mapsDirections:
-    "https://www.google.com/maps/dir/?api=1&destination=Rua+Coronel+Garcia,+158+-+Centro,+Santa+Rosa+de+Viterbo+-+SP",
+    "https://www.google.com/maps/dir/?api=1&destination=Rua+Coronel+Garcia,+158,+Santa+Rosa+de+Viterbo,+Sao+Paulo,+14270-000",
 };
 
 export const whatsappMessage =
