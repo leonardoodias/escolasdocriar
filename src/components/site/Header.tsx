@@ -145,6 +145,38 @@ export function Header() {
                 </Link>
               </Button>
             </li>
+            <li className="grid grid-cols-2 gap-3 pt-2">
+              <Button
+                asChild
+                variant="outline"
+                className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
+              >
+                <a
+                  href={school.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <Instagram className="mr-2 size-5" />
+                  Instagram
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
+              >
+                <a
+                  href={school.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  <Facebook className="mr-2 size-5" />
+                  Facebook
+                </a>
+              </Button>
+            </li>
           </ul>
         </nav>
       )}
