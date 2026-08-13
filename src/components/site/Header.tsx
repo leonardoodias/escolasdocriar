@@ -56,6 +56,36 @@ export function Header() {
             asChild
             variant="outline"
             size="icon"
+            className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
+          >
+            <a
+              href={school.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da escola"
+            >
+              <Instagram className="size-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
+          >
+            <a
+              href={school.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook da escola"
+            >
+              <Facebook className="size-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
             className="min-h-11 min-w-11 rounded-full border-primary/30 text-primary"
           >
             <a
