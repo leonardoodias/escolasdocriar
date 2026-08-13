@@ -1,3 +1,4 @@
+import { ExternalLink } from "@/components/site/ExternalLink";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
@@ -58,14 +59,12 @@ export function Header() {
             size="icon"
             className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
           >
-            <a
+            <ExternalLink
               href={school.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Instagram da escola"
             >
               <Instagram className="size-5" />
-            </a>
+            </ExternalLink>
           </Button>
           <Button
             asChild
@@ -73,14 +72,12 @@ export function Header() {
             size="icon"
             className="hidden min-h-11 min-w-11 rounded-full border-primary/30 text-primary sm:grid sm:place-items-center"
           >
-            <a
+            <ExternalLink
               href={school.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Facebook da escola"
             >
               <Facebook className="size-5" />
-            </a>
+            </ExternalLink>
           </Button>
           <Button
             asChild
@@ -88,14 +85,12 @@ export function Header() {
             size="icon"
             className="min-h-11 min-w-11 rounded-full border-primary/30 text-primary"
           >
-            <a
+            <ExternalLink
               href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Falar com a escola pelo WhatsApp"
             >
               <MessageCircle className="size-5" />
-            </a>
+            </ExternalLink>
           </Button>
           <Button
             asChild
@@ -151,30 +146,26 @@ export function Header() {
                 variant="outline"
                 className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
               >
-                <a
+                <ExternalLink
                   href={school.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                 >
                   <Instagram className="mr-2 size-5" />
                   Instagram
-                </a>
+                </ExternalLink>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 className="min-h-12 w-full rounded-full border-primary/30 font-bold text-primary"
               >
-                <a
+                <ExternalLink
                   href={school.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                 >
                   <Facebook className="mr-2 size-5" />
                   Facebook
-                </a>
+                </ExternalLink>
               </Button>
             </li>
           </ul>
