@@ -20,19 +20,19 @@ export const school = {
   whatsappNumber: "5516900000000",
   email: "contato@castelodocriar.com.br",
   address: {
-    street: "Rua Exemplo, 000 — Centro",
+    street: "Rua Coronel Garcia, 158 — Centro",
     city: "Santa Rosa de Viterbo/SP",
     zip: "CEP 14270-000",
   },
   hours: "Segunda a sexta, das 7h às 18h",
   social: {
-    instagram: "https://instagram.com/",
+    instagram: "https://instagram.com/castelo_do_criar",
     facebook: "https://facebook.com/",
   },
   mapsEmbed:
-    "https://www.google.com/maps?q=Santa+Rosa+de+Viterbo+SP&output=embed",
+    "https://www.google.com/maps?q=Rua+Coronel+Garcia,+158+-+Centro,+Santa+Rosa+de+Viterbo+-+SP&output=embed",
   mapsDirections:
-    "https://www.google.com/maps/dir/?api=1&destination=Santa+Rosa+de+Viterbo+SP",
+    "https://www.google.com/maps/dir/?api=1&destination=Rua+Coronel+Garcia,+158+-+Centro,+Santa+Rosa+de+Viterbo+-+SP",
 };
 
 export const whatsappMessage =
