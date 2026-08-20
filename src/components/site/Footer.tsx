@@ -2,45 +2,36 @@ import { ExternalLink } from "@/components/site/ExternalLink";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
-import logo from "@/assets/logo-castelo.png";
-import { school, whatsappLink } from "@/content/site";
-
-const quickLinks = [
-  { label: "A Escola", to: "/a-escola" },
-  { label: "Segmentos", to: "/segmentos" },
-  { label: "Projetos", to: "/projetos" },
-  { label: "Matrículas", to: "/matriculas" },
-  { label: "Contato", to: "/contato" },
-];
+import { grupo, escolas } from "@/content/grupo";
+import { navLinks, school, whatsappLink } from "@/content/site";
 
 export function Footer() {
   return (
-    <footer className="mt-8 border-t border-border bg-secondary/60">
+    <footer className="mt-8 border-t border-border bg-secondary/50">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <img
-            src={logo}
-            alt="Logo da Escola Castelo do Criar"
-            width={64}
-            height={64}
+            src={grupo.logo}
+            alt="Logo Escolas do Criar"
+            width={72}
+            height={72}
             loading="lazy"
-            className="h-16 w-16 object-contain"
+            className="h-18 w-18 object-contain"
           />
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Educação Infantil, Ensino Fundamental e Ensino Médio em{" "}
-            {school.address.city}. Conhecimento, afeto e criatividade em cada etapa.
+            {grupo.nome} — {escolas.map((e) => e.nome).join(" e ")}. {grupo.descricao}
           </p>
           <div className="mt-5 flex gap-3">
             <ExternalLink
               href={school.social.instagram}
-              aria-label="Instagram da escola"
+              aria-label="Instagram das escolas"
               className="grid size-11 place-items-center rounded-full bg-background text-primary shadow-soft transition-colors hover:bg-primary-soft"
             >
               <Instagram className="size-5" />
             </ExternalLink>
             <ExternalLink
               href={school.social.facebook}
-              aria-label="Facebook da escola"
+              aria-label="Facebook das escolas"
               className="grid size-11 place-items-center rounded-full bg-background text-primary shadow-soft transition-colors hover:bg-primary-soft"
             >
               <Facebook className="size-5" />
@@ -51,7 +42,7 @@ export function Footer() {
         <nav aria-label="Links rápidos">
           <h2 className="font-display text-lg font-bold text-primary">Links rápidos</h2>
           <ul className="mt-4 space-y-2">
-            {quickLinks.map((l) => (
+            {navLinks.slice(1).map((l) => (
               <li key={l.to}>
                 <Link
                   to={l.to}
@@ -86,10 +77,7 @@ export function Footer() {
                 className="mt-0.5 size-4 shrink-0 text-accent"
                 aria-hidden="true"
               />
-              <ExternalLink
-                href={whatsappLink}
-                className="hover:text-primary"
-              >
+              <ExternalLink href={whatsappLink} className="hover:text-primary">
                 WhatsApp {school.whatsapp}
               </ExternalLink>
             </li>
@@ -105,7 +93,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} Escola Castelo do Criar — Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} {grupo.nome} — Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <Link to="/politica-de-privacidade" className="hover:text-primary">
               Política de Privacidade

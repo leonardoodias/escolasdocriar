@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { CalendarCheck, MessageCircle } from "lucide-react";
+import { ArrowRight, CalendarCheck, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/Section";
+import { ExternalLink } from "@/components/site/ExternalLink";
 import { whatsappLink } from "@/content/site";
 
 export function CtaMatriculas() {
@@ -20,11 +21,11 @@ export function CtaMatriculas() {
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-3xl font-extrabold text-primary-foreground md:text-4xl">
-              Venha fazer parte do Castelo do Criar
+              Venha conhecer as Escolas do Criar
             </h2>
             <p className="mt-5 text-base text-primary-foreground/90 md:text-lg">
-              Quer conhecer nossa proposta, nossa estrutura e descobrir qual é o melhor
-              caminho para seu filho?
+              Agende uma visita e descubra qual das nossas escolas é o melhor caminho para
+              seu filho.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button
@@ -34,7 +35,7 @@ export function CtaMatriculas() {
               >
                 <Link to="/matriculas">
                   <CalendarCheck className="size-5" aria-hidden="true" />
-                  Agendar uma visita
+                  Agende uma visita
                 </Link>
               </Button>
               <Button
@@ -43,10 +44,21 @@ export function CtaMatriculas() {
                 variant="outline"
                 className="min-h-12 rounded-full border-white/60 bg-transparent font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
               >
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={whatsappLink}>
                   <MessageCircle className="size-5" aria-hidden="true" />
-                  Falar pelo WhatsApp
-                </a>
+                  Fale no WhatsApp
+                </ExternalLink>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="ghost"
+                className="min-h-12 rounded-full font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
+              >
+                <Link to="/matriculas">
+                  Saiba mais sobre matrículas
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
               </Button>
             </div>
           </div>
