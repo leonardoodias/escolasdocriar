@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AEscolaRouteImport } from './routes/a-escola'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as DestaquesRouteImport } from './routes/destaques'
 import { Route as EducacaoInfantilRouteImport } from './routes/educacao-infantil'
 import { Route as EnsinoFundamentalRouteImport } from './routes/ensino-fundamental'
 import { Route as EnsinoMedioRouteImport } from './routes/ensino-medio'
@@ -40,6 +41,11 @@ const AEscolaRoute = AEscolaRouteImport.update({
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestaquesRoute = DestaquesRouteImport.update({
+  id: '/destaques',
+  path: '/destaques',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EducacaoInfantilRoute = EducacaoInfantilRouteImport.update({
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
   '/contato': typeof ContatoRoute
+  '/destaques': typeof DestaquesRoute
   '/educacao-infantil': typeof EducacaoInfantilRoute
   '/ensino-fundamental': typeof EnsinoFundamentalRoute
   '/ensino-medio': typeof EnsinoMedioRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
   '/contato': typeof ContatoRoute
+  '/destaques': typeof DestaquesRoute
   '/educacao-infantil': typeof EducacaoInfantilRoute
   '/ensino-fundamental': typeof EnsinoFundamentalRoute
   '/ensino-medio': typeof EnsinoMedioRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/a-escola': typeof AEscolaRoute
   '/contato': typeof ContatoRoute
+  '/destaques': typeof DestaquesRoute
   '/educacao-infantil': typeof EducacaoInfantilRoute
   '/ensino-fundamental': typeof EnsinoFundamentalRoute
   '/ensino-medio': typeof EnsinoMedioRoute
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/a-escola'
     | '/contato'
+    | '/destaques'
     | '/educacao-infantil'
     | '/ensino-fundamental'
     | '/ensino-medio'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/'
     | '/a-escola'
     | '/contato'
+    | '/destaques'
     | '/educacao-infantil'
     | '/ensino-fundamental'
     | '/ensino-medio'
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/'
     | '/a-escola'
     | '/contato'
+    | '/destaques'
     | '/educacao-infantil'
     | '/ensino-fundamental'
     | '/ensino-medio'
@@ -235,6 +247,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AEscolaRoute: typeof AEscolaRoute
   ContatoRoute: typeof ContatoRoute
+  DestaquesRoute: typeof DestaquesRoute
   EducacaoInfantilRoute: typeof EducacaoInfantilRoute
   EnsinoFundamentalRoute: typeof EnsinoFundamentalRoute
   EnsinoMedioRoute: typeof EnsinoMedioRoute
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       path: '/contato'
       fullPath: '/contato'
       preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destaques': {
+      id: '/destaques'
+      path: '/destaques'
+      fullPath: '/destaques'
+      preLoaderRoute: typeof DestaquesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/educacao-infantil': {
@@ -379,6 +399,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AEscolaRoute: AEscolaRoute,
   ContatoRoute: ContatoRoute,
+  DestaquesRoute: DestaquesRoute,
   EducacaoInfantilRoute: EducacaoInfantilRoute,
   EnsinoFundamentalRoute: EnsinoFundamentalRoute,
   EnsinoMedioRoute: EnsinoMedioRoute,
