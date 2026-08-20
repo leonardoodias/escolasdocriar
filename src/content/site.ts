@@ -41,14 +41,11 @@ export const whatsappLink = `https://wa.me/${school.whatsappNumber}?text=${encod
   whatsappMessage,
 )}`;
 
+/** Menu principal do MVP — mantenha enxuto. */
 export const navLinks = [
   { label: "Início", to: "/" },
-  { label: "A Escola", to: "/a-escola" },
-  { label: "Segmentos", to: "/segmentos" },
-  { label: "Nossa Proposta", to: "/nossa-proposta" },
-  { label: "Projetos", to: "/projetos" },
-  { label: "Notícias", to: "/noticias" },
-  { label: "Galeria", to: "/galeria" },
+  { label: "Escolas", to: "/escolas" },
+  { label: "Destaques", to: "/destaques" },
   { label: "Matrículas", to: "/matriculas" },
   { label: "Contato", to: "/contato" },
 ] as const;
