@@ -81,13 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Escola Castelo do Criar — Santa Rosa de Viterbo/SP" },
+      { title: "Escolas do Criar — Santa Rosa de Viterbo/SP" },
       {
         name: "description",
         content:
-          "Escola de Educação Infantil, Ensino Fundamental e Ensino Médio em Santa Rosa de Viterbo/SP.",
+          "Grupo Escolas do Criar: Castelo do Criar e Castelinho, em Santa Rosa de Viterbo/SP.",
       },
-      { property: "og:site_name", content: "Escola Castelo do Criar" },
+      { property: "og:site_name", content: "Escolas do Criar" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
