@@ -26,10 +26,10 @@ export function Header() {
             className="h-11 w-11 shrink-0 object-contain"
           />
           <span className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate font-display text-base font-extrabold text-primary">
+            <span className="truncate font-display text-lg font-extrabold text-primary sm:text-xl">
               {grupo.nome}
             </span>
-            <span className="truncate text-[11px] font-semibold tracking-wide text-muted-foreground uppercase">
+            <span className="truncate text-xs font-semibold tracking-wide text-muted-foreground uppercase sm:text-sm">
               {grupo.cidade}
             </span>
           </span>
