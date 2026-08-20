@@ -107,10 +107,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "School",
-          name: "Escola Castelo do Criar",
+          "@type": "EducationalOrganization",
+          name: "Escolas do Criar",
           description:
-            "Escola de Educação Infantil, Ensino Fundamental e Ensino Médio em Santa Rosa de Viterbo/SP.",
+            "Grupo educacional em Santa Rosa de Viterbo/SP formado pelas escolas Castelo do Criar e Castelinho.",
+          subOrganization: [
+            { "@type": "School", name: "Castelo do Criar" },
+            { "@type": "School", name: "Castelinho" },
+          ],
           address: {
             "@type": "PostalAddress",
             addressLocality: "Santa Rosa de Viterbo",
