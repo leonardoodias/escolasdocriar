@@ -23,6 +23,7 @@ import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as SegmentosRouteImport } from './routes/segmentos'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as EscolasIndexRouteImport } from './routes/escolas.index'
+import { Route as EscolasSlugRouteImport } from './routes/escolas.$slug'
 import { Route as NoticiasIndexRouteImport } from './routes/noticias.index'
 import { Route as NoticiasSlugRouteImport } from './routes/noticias.$slug'
 
@@ -96,6 +97,11 @@ const EscolasIndexRoute = EscolasIndexRouteImport.update({
   path: '/escolas/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EscolasSlugRoute = EscolasSlugRouteImport.update({
+  id: '/escolas/$slug',
+  path: '/escolas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NoticiasIndexRoute = NoticiasIndexRouteImport.update({
   id: '/noticias/',
   path: '/noticias/',
@@ -121,6 +127,7 @@ export interface FileRoutesByFullPath {
   '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/escolas/$slug': typeof EscolasSlugRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/escolas/': typeof EscolasIndexRoute
   '/noticias/': typeof NoticiasIndexRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByTo {
   '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/escolas/$slug': typeof EscolasSlugRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/escolas': typeof EscolasIndexRoute
   '/noticias': typeof NoticiasIndexRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/projetos': typeof ProjetosRoute
   '/segmentos': typeof SegmentosRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/escolas/$slug': typeof EscolasSlugRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
   '/escolas/': typeof EscolasIndexRoute
   '/noticias/': typeof NoticiasIndexRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/segmentos'
     | '/termos-de-uso'
+    | '/escolas/$slug'
     | '/noticias/$slug'
     | '/escolas/'
     | '/noticias/'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/segmentos'
     | '/termos-de-uso'
+    | '/escolas/$slug'
     | '/noticias/$slug'
     | '/escolas'
     | '/noticias'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/segmentos'
     | '/termos-de-uso'
+    | '/escolas/$slug'
     | '/noticias/$slug'
     | '/escolas/'
     | '/noticias/'
@@ -233,6 +245,7 @@ export interface RootRouteChildren {
   ProjetosRoute: typeof ProjetosRoute
   SegmentosRoute: typeof SegmentosRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
+  EscolasSlugRoute: typeof EscolasSlugRoute
   NoticiasSlugRoute: typeof NoticiasSlugRoute
   EscolasIndexRoute: typeof EscolasIndexRoute
   NoticiasIndexRoute: typeof NoticiasIndexRoute
@@ -338,6 +351,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EscolasIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/escolas/$slug': {
+      id: '/escolas/$slug'
+      path: '/escolas/$slug'
+      fullPath: '/escolas/$slug'
+      preLoaderRoute: typeof EscolasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/noticias/': {
       id: '/noticias/'
       path: '/noticias'
@@ -369,6 +389,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjetosRoute: ProjetosRoute,
   SegmentosRoute: SegmentosRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
+  EscolasSlugRoute: EscolasSlugRoute,
   NoticiasSlugRoute: NoticiasSlugRoute,
   EscolasIndexRoute: EscolasIndexRoute,
   NoticiasIndexRoute: NoticiasIndexRoute,
