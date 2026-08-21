@@ -55,9 +55,9 @@ export function DestaquesSection() {
           text="Acompanhe o que está acontecendo nas Escolas do Criar."
         />
 
-        <div className="mt-12 overflow-hidden rounded-4xl border border-border bg-card shadow-lift">
+        <div className="mt-8 overflow-hidden rounded-3xl md:mt-10 md:rounded-4xl border border-border bg-card shadow-lift">
           <div className="grid md:grid-cols-2">
-            <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[22rem]">
+            <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[20rem]">
               <img
                 key={atual.id}
                 src={atual.imagem}
@@ -66,7 +66,7 @@ export function DestaquesSection() {
                 className="absolute inset-0 size-full object-cover"
               />
             </div>
-            <div className="flex flex-col justify-center p-7 md:p-12">
+            <div className="flex flex-col justify-center p-6 md:p-10">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-extrabold tracking-wide text-primary uppercase">
                   {atual.tag}
@@ -77,11 +77,11 @@ export function DestaquesSection() {
                   </span>
                 )}
               </div>
-              <h3 className="mt-5 text-2xl font-extrabold text-primary-deep md:text-3xl">
+              <h3 className="mt-4 text-2xl font-extrabold text-primary-deep md:text-3xl">
                 {atual.titulo}
               </h3>
-              <p className="mt-4 text-muted-foreground">{atual.texto}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <p className="mt-3 text-muted-foreground">{atual.texto}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-4">
                 <DestaqueCta cta={atual.cta} />
                 {total > 1 && (
                   <div className="flex items-center gap-2">

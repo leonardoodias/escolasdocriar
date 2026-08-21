@@ -17,11 +17,11 @@ export function EscolasSection({ heading = true }: { heading?: boolean }) {
           />
         )}
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-2 md:gap-8">
           {escolas.map((escola) => (
             <article
               key={escola.slug}
-              className="card-hover group flex flex-col overflow-hidden rounded-4xl border border-border bg-card shadow-soft"
+              className="card-hover group flex flex-col overflow-hidden rounded-3xl md:rounded-4xl border border-border bg-card shadow-soft"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
@@ -37,15 +37,15 @@ export function EscolasSection({ heading = true }: { heading?: boolean }) {
                   imgClassName="size-full"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-6 md:p-8">
+              <div className="flex flex-1 flex-col p-6 md:p-7">
                 <p className="text-xs font-extrabold tracking-[0.14em] text-accent uppercase">
                   {escola.faixa}
                 </p>
-                <h3 className="mt-3 text-2xl font-extrabold text-primary-deep">
+                <h3 className="mt-2.5 text-2xl font-extrabold text-primary-deep">
                   {escola.nome}
                 </h3>
-                <p className="mt-3 text-muted-foreground">{escola.resumo}</p>
-                <div className="mt-7">
+                <p className="mt-2.5 text-muted-foreground">{escola.resumo}</p>
+                <div className="mt-6">
                   <Button
                     asChild
                     variant="outline"

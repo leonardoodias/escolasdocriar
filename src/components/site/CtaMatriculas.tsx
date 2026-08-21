@@ -10,31 +10,31 @@ export function CtaMatriculas() {
   return (
     <section className="section">
       <Container>
-        <div className="gradient-hero relative overflow-hidden rounded-4xl px-6 py-14 text-center md:px-16 md:py-20">
+        <div className="gradient-hero relative mx-auto max-w-5xl overflow-hidden rounded-3xl md:rounded-4xl px-6 py-12 text-center shadow-lift md:px-14 md:py-16">
           <div
             aria-hidden="true"
-            className="absolute -top-16 -right-10 size-56 rounded-full bg-white/10"
+            className="absolute -top-16 -right-10 size-56 rounded-full bg-white/10 blur-xl"
           />
           <div
             aria-hidden="true"
-            className="absolute -bottom-20 -left-12 size-64 rounded-full bg-white/10"
+            className="absolute -bottom-20 -left-12 size-64 rounded-full bg-white/10 blur-xl"
           />
           <div className="relative mx-auto max-w-2xl">
-            <h2 className="text-3xl font-extrabold text-primary-foreground md:text-4xl">
+            <h2 className="text-2xl font-extrabold text-primary-foreground sm:text-3xl md:text-4xl">
               Venha conhecer as Escolas do Criar
             </h2>
-            <p className="mt-5 text-base text-primary-foreground/90 md:text-lg">
+            <p className="mt-4 text-base text-primary-foreground/90 sm:text-lg">
               Agende uma visita e descubra qual das nossas escolas é o melhor caminho para
               seu filho.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
               <Button
                 asChild
                 size="lg"
-                className="min-h-12 rounded-full bg-background font-bold text-primary hover:bg-background/90"
+                className="min-h-12 rounded-full bg-background px-6 font-bold text-primary shadow-soft hover:bg-background/95 hover:text-primary-deep"
               >
                 <Link to="/matriculas">
-                  <CalendarCheck className="size-5" aria-hidden="true" />
+                  <CalendarCheck className="mr-2 size-5" aria-hidden="true" />
                   Agende uma visita
                 </Link>
               </Button>
@@ -42,10 +42,10 @@ export function CtaMatriculas() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="min-h-12 rounded-full border-white/60 bg-transparent font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
+                className="min-h-12 rounded-full border-white/60 bg-transparent px-6 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
               >
                 <ExternalLink href={whatsappLink}>
-                  <MessageCircle className="size-5" aria-hidden="true" />
+                  <MessageCircle className="mr-2 size-5" aria-hidden="true" />
                   Fale no WhatsApp
                 </ExternalLink>
               </Button>
@@ -53,11 +53,11 @@ export function CtaMatriculas() {
                 asChild
                 size="lg"
                 variant="ghost"
-                className="min-h-12 rounded-full font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
+                className="min-h-12 rounded-full px-5 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
               >
                 <Link to="/matriculas">
                   Saiba mais sobre matrículas
-                  <ArrowRight className="size-4" aria-hidden="true" />
+                  <ArrowRight className="ml-1.5 size-4" aria-hidden="true" />
                 </Link>
               </Button>
             </div>

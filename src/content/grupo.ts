@@ -69,9 +69,9 @@ export const escolas: Escola[] = [
     slug: "castelo-do-criar",
     to: "/escolas/castelo-do-criar",
     nome: "Castelo do Criar",
-    faixa: "Ensino Fundamental e Ensino Médio",
+    faixa: "Ensino Fundamental I • Ensino Fundamental II • Ensino Médio",
     resumo:
-      "Formação sólida, projetos criativos e acompanhamento próximo em todas as etapas da vida escolar.",
+      "Formação sólida, projetos criativos e acompanhamento próximo no Ensino Fundamental I, Ensino Fundamental II e Ensino Médio.",
     descricao:
       "No Castelo do Criar, o conhecimento é construído com propósito: base acadêmica consistente, vivências práticas e uma equipe que conhece cada aluno pelo nome.",
     logo: logoCastelo3d.url,
@@ -91,7 +91,7 @@ export const escolas: Escola[] = [
       },
     ],
     proposta: [
-      "Ensino Fundamental e Ensino Médio",
+      "Ensino Fundamental I, Ensino Fundamental II e Ensino Médio",
       "Turmas com acompanhamento pedagógico próximo",
       "Projetos interdisciplinares e vivências práticas",
       "Formação em valores e protagonismo do aluno",
