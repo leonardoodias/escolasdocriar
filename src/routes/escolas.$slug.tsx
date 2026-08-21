@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
 import { BrandLogo } from "@/components/site/BrandLogo";
+import { CasteloDoCriarPage } from "@/components/site/CasteloDoCriarPage";
 import { Container, SectionHeading } from "@/components/site/Section";
 import { CtaMatriculas } from "@/components/site/CtaMatriculas";
 import { getEscola } from "@/content/grupo";
@@ -34,6 +35,10 @@ export const Route = createFileRoute("/escolas/$slug")({
 
 function EscolaPage() {
   const { escola } = Route.useLoaderData();
+
+  if (escola.slug === "castelo-do-criar") {
+    return <CasteloDoCriarPage escola={escola} />;
+  }
 
   return (
     <>
