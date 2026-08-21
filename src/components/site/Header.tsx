@@ -17,7 +17,7 @@ export function Header() {
         <Link
           to="/"
           className="flex min-w-0 flex-col text-left leading-tight transition-opacity hover:opacity-90"
-          aria-label="Escolas do Criar — página inicial"
+          aria-label="ESCOLAS DO CRIAR — página inicial"
         >
           <span className="truncate font-display text-[18px] font-bold tracking-tight text-primary sm:text-[19px]">
             {grupo.nome}

@@ -9,7 +9,7 @@ import casteloImg from "@/assets/hero-escola.jpg";
 import logoCastelo3d from "@/assets/logo-castelo-3d.png.asset.json";
 
 export const grupo = {
-  nome: "Escolas do Criar",
+  nome: "ESCOLAS DO CRIAR",
   tagline: "Duas escolas, um propósito em comum",
   descricao:
     "Educar com acolhimento, criatividade e desenvolvimento — do primeiro passo na escola até a formação para o futuro.",
