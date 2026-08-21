@@ -16,10 +16,7 @@ export function HeroGrupo() {
       <Container className="relative py-16 md:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_auto]">
           <div className="max-w-2xl">
-            <p className="text-xs font-extrabold tracking-[0.2em] text-primary-foreground/80 uppercase">
-              {grupo.nome} — {grupo.cidade}
-            </p>
-            <h1 className="mt-5 text-4xl leading-tight font-extrabold text-primary-foreground md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl leading-tight font-extrabold text-primary-foreground md:text-5xl lg:text-6xl">
               Duas escolas, um propósito em comum
             </h1>
             <p className="mt-6 text-lg text-primary-foreground/85 md:text-xl">

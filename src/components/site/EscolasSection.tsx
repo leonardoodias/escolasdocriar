@@ -12,7 +12,6 @@ export function EscolasSection({ heading = true }: { heading?: boolean }) {
       <Container>
         {heading && (
           <SectionHeading
-            eyebrow="Escolas do Criar"
             title="Conheça nossas escolas"
             text="Duas propostas complementares para acompanhar cada fase do desenvolvimento."
           />

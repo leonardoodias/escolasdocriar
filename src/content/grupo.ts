@@ -34,38 +34,6 @@ export type Escola = {
 
 export const escolas: Escola[] = [
   {
-    slug: "castelo-do-criar",
-    to: "/escolas/castelo-do-criar",
-    nome: "Castelo do Criar",
-    faixa: "Educação Infantil, Fundamental e Médio",
-    resumo:
-      "Formação sólida, projetos criativos e acompanhamento próximo em todas as etapas da vida escolar.",
-    descricao:
-      "No Castelo do Criar, o conhecimento é construído com propósito: base acadêmica consistente, vivências práticas e uma equipe que conhece cada aluno pelo nome.",
-    logo: logoCastelo3d.url,
-    imagem: casteloImg,
-    destaques: [
-      {
-        title: "Base acadêmica sólida",
-        text: "Currículo estruturado, acompanhamento individual e preparo para os próximos passos.",
-      },
-      {
-        title: "Projetos e vivências",
-        text: "Educação financeira, cultura, esportes e projetos que dão sentido ao aprendizado.",
-      },
-      {
-        title: "Parceria com a família",
-        text: "Comunicação aberta e encontros ao longo do ano para caminhar junto com cada família.",
-      },
-    ],
-    proposta: [
-      "Educação Infantil, Ensino Fundamental e Ensino Médio",
-      "Turmas com acompanhamento pedagógico próximo",
-      "Projetos interdisciplinares e vivências práticas",
-      "Formação em valores e protagonismo do aluno",
-    ],
-  },
-  {
     slug: "castelinho",
     to: "/escolas/castelinho",
     nome: "Castelinho",
@@ -95,6 +63,38 @@ export const escolas: Escola[] = [
       "Rotina de cuidados e autonomia",
       "Experiências com arte, música, natureza e movimento",
       "Comunicação diária com as famílias",
+    ],
+  },
+  {
+    slug: "castelo-do-criar",
+    to: "/escolas/castelo-do-criar",
+    nome: "Castelo do Criar",
+    faixa: "Ensino Fundamental e Ensino Médio",
+    resumo:
+      "Formação sólida, projetos criativos e acompanhamento próximo em todas as etapas da vida escolar.",
+    descricao:
+      "No Castelo do Criar, o conhecimento é construído com propósito: base acadêmica consistente, vivências práticas e uma equipe que conhece cada aluno pelo nome.",
+    logo: logoCastelo3d.url,
+    imagem: casteloImg,
+    destaques: [
+      {
+        title: "Base acadêmica sólida",
+        text: "Currículo estruturado, acompanhamento individual e preparo para os próximos passos.",
+      },
+      {
+        title: "Projetos e vivências",
+        text: "Educação financeira, cultura, esportes e projetos que dão sentido ao aprendizado.",
+      },
+      {
+        title: "Parceria com a família",
+        text: "Comunicação aberta e encontros ao longo do ano para caminhar junto com cada família.",
+      },
+    ],
+    proposta: [
+      "Ensino Fundamental e Ensino Médio",
+      "Turmas com acompanhamento pedagógico próximo",
+      "Projetos interdisciplinares e vivências práticas",
+      "Formação em valores e protagonismo do aluno",
     ],
   },
 ];
