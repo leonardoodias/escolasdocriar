@@ -33,7 +33,7 @@ export function EscolasSection({ heading = true }: { heading?: boolean }) {
                 <BrandLogo
                   src={escola.logo}
                   nome={escola.nome}
-                  className="absolute bottom-4 left-4 size-16 rounded-2xl bg-background/90 p-1.5 backdrop-blur"
+                  className="absolute bottom-4 left-4 size-20 rounded-2xl bg-background/95 p-2 shadow-soft backdrop-blur"
                   imgClassName="size-full"
                 />
               </div>

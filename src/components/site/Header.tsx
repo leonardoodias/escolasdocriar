@@ -1,42 +1,46 @@
-import { ExternalLink } from "@/components/site/ExternalLink";
+import { ContatoDialog } from "@/components/site/ContatoDialog";
 import { Link } from "@tanstack/react-router";
 import { CalendarCheck, Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { grupo } from "@/content/grupo";
-import { navLinks, whatsappLink } from "@/content/site";
+import { navLinks } from "@/content/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        {/* Brand Identity (Text-only) */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
+        {/* Brand Identity */}
         <Link
           to="/"
-          className="flex min-w-0 flex-col text-left leading-tight transition-opacity hover:opacity-90"
+          className="shrink-0 transition-opacity hover:opacity-90"
           aria-label="ESCOLAS DO CRIAR — página inicial"
         >
-          <span className="truncate font-display text-[18px] font-bold tracking-tight text-primary sm:text-[19px]">
-            {grupo.nome}
-          </span>
-          <span className="truncate text-[10.5px] font-medium tracking-wider text-muted-foreground uppercase sm:text-[11px]">
-            {grupo.cidade}
-          </span>
+          <img
+            src={grupo.logo}
+            alt="Escolas do Criar — Castelinho e Castelo"
+            width={720}
+            height={419}
+            className="h-[3.75rem] w-auto sm:h-[4.5rem]"
+          />
         </Link>
 
         {/* Desktop Navigation */}
         <nav aria-label="Menu principal" className="hidden lg:block">
-          <ul className="flex items-center gap-1.5 xl:gap-2">
+          <ul className="flex items-center gap-1 xl:gap-1.5">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <Link
                   to={link.to}
                   activeOptions={{ exact: link.to === "/" }}
-                  activeProps={{ className: "bg-primary-soft text-primary font-bold" }}
-                  className="rounded-full px-3.5 py-2 text-[13.5px] font-semibold text-foreground/80 transition-colors hover:bg-muted hover:text-primary"
+                  activeProps={{
+                    className:
+                      "bg-primary text-primary-foreground shadow-soft hover:bg-primary hover:text-primary-foreground",
+                  }}
+                  className="rounded-full px-3 py-2 text-sm font-bold text-primary-deep transition-colors hover:bg-primary-soft hover:text-primary xl:px-4 xl:text-[15px]"
                 >
                   {link.label}
                 </Link>
@@ -47,16 +51,16 @@ export function Header() {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2.5">
-          <Button
-            asChild
-            variant="outline"
-            size="icon"
-            className="size-9.5 rounded-full border-primary/30 text-primary transition-colors hover:bg-primary-soft hover:text-primary"
-          >
-            <ExternalLink href={whatsappLink} aria-label="Falar pelo WhatsApp">
+          <ContatoDialog>
+            <Button
+              variant="outline"
+              size="icon"
+              aria-label="Fale com a nossa equipe"
+              className="size-9.5 rounded-full border-primary/30 text-primary transition-colors hover:bg-primary-soft hover:text-primary"
+            >
               <MessageCircle className="size-4.5" />
-            </ExternalLink>
-          </Button>
+            </Button>
+          </ContatoDialog>
 
           <Button
             asChild
@@ -95,8 +99,11 @@ export function Header() {
                   to={link.to}
                   onClick={() => setOpen(false)}
                   activeOptions={{ exact: link.to === "/" }}
-                  activeProps={{ className: "bg-primary-soft text-primary font-bold" }}
-                  className="block rounded-xl px-3.5 py-2.5 text-base font-semibold text-foreground/85 transition-colors hover:bg-muted"
+                  activeProps={{
+                    className:
+                      "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground",
+                  }}
+                  className="block rounded-xl px-3.5 py-2.5 text-base font-bold text-primary-deep transition-colors hover:bg-primary-soft hover:text-primary"
                 >
                   {link.label}
                 </Link>
@@ -114,16 +121,16 @@ export function Header() {
               </Button>
             </li>
             <li className="pt-1.5">
-              <Button
-                asChild
-                variant="outline"
-                className="h-11 w-full rounded-full border-primary/30 font-bold text-primary"
-              >
-                <ExternalLink href={whatsappLink} onClick={() => setOpen(false)}>
+              {/* O menu permanece aberto: fechá-lo desmontaria o modal junto. */}
+              <ContatoDialog>
+                <Button
+                  variant="outline"
+                  className="h-11 w-full rounded-full border-primary/30 font-bold text-primary"
+                >
                   <MessageCircle className="mr-2 size-4" />
-                  WhatsApp
-                </ExternalLink>
-              </Button>
+                  Fale com a nossa equipe
+                </Button>
+              </ContatoDialog>
             </li>
           </ul>
         </nav>

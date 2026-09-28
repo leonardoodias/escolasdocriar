@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { ContatoDialog } from "@/components/site/ContatoDialog";
 import { Container, PageHero } from "@/components/site/Section";
 import { segmentos } from "@/content/segmentos";
-import { school, whatsappLink } from "@/content/site";
+import { school } from "@/content/site";
 
 export const Route = createFileRoute("/matriculas")({
   head: () => ({
@@ -169,15 +170,15 @@ function Matriculas() {
                 Enviar solicitação
               </Button>
               <p className="mt-4 text-xs text-muted-foreground">
-                Prefere falar agora? Chame no{" "}
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-primary"
-                >
-                  WhatsApp {school.whatsapp}
-                </a>
+                Prefere falar agora?{" "}
+                <ContatoDialog>
+                  <button
+                    type="button"
+                    className="cursor-pointer font-bold text-primary hover:underline"
+                  >
+                    Fale com a nossa equipe
+                  </button>
+                </ContatoDialog>
                 .
               </p>
             </form>

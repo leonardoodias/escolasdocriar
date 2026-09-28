@@ -27,13 +27,11 @@ import ensinoMedioImg from "@/assets/ensino-medio.jpg";
 import logoCastelo3d from "@/assets/logo-castelo-3d.png.asset.json";
 import { Container, SectionHeading } from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
+import { unidades } from "@/content/contatos";
 import type { Escola } from "@/content/grupo";
 
 const casteloContact = {
   address: "Rua Coronel Garcia, 158 — Centro, Santa Rosa de Viterbo/SP — CEP: 14270-077",
-  phone: "(16) 3954-5223",
-  phoneHref: "tel:+551639545223",
-  whatsappUrl: "https://wa.me/5516994442252",
   facebookUrl: "https://www.facebook.com/castelodocriar",
   instagramUrl: "https://www.instagram.com/castelo_do_criar",
   mapsEmbed:
@@ -118,7 +116,7 @@ export function CasteloDoCriarPage({ escola }: { escola: Escola }) {
                 variant="outline"
                 className="min-h-12 rounded-full border-white/40 bg-transparent px-7 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
               >
-                <ExternalLink href={casteloContact.whatsappUrl}>
+                <ExternalLink href={unidades.castelo.whatsappUrl}>
                   <MessageCircle className="mr-2 size-5" aria-hidden="true" />
                   Fale com a secretaria
                 </ExternalLink>
@@ -361,10 +359,10 @@ export function CasteloDoCriarPage({ escola }: { escola: Escola }) {
                       Telefone
                     </span>
                     <a
-                      href={casteloContact.phoneHref}
+                      href={unidades.castelo.telefoneHref}
                       className="font-bold text-foreground hover:text-primary transition-colors"
                     >
-                      {casteloContact.phone}
+                      {unidades.castelo.telefone}
                     </a>
                   </div>
                 </li>
@@ -375,10 +373,10 @@ export function CasteloDoCriarPage({ escola }: { escola: Escola }) {
                       WhatsApp da Secretaria
                     </span>
                     <ExternalLink
-                      href={casteloContact.whatsappUrl}
+                      href={unidades.castelo.whatsappUrl}
                       className="font-bold text-foreground hover:text-primary transition-colors"
                     >
-                      (16) 99444-2252
+                      {unidades.castelo.whatsapp}
                     </ExternalLink>
                   </div>
                 </li>
@@ -407,7 +405,7 @@ export function CasteloDoCriarPage({ escola }: { escola: Escola }) {
                   asChild
                   className="min-h-12 rounded-full gradient-accent font-bold text-accent-foreground shadow-soft hover:opacity-90"
                 >
-                  <ExternalLink href={casteloContact.whatsappUrl}>
+                  <ExternalLink href={unidades.castelo.whatsappUrl}>
                     <MessageCircle className="mr-2 size-4" />
                     Falar no WhatsApp
                   </ExternalLink>
@@ -467,7 +465,7 @@ export function CasteloDoCriarPage({ escola }: { escola: Escola }) {
                 variant="outline"
                 className="min-h-12 rounded-full border-white/40 bg-transparent px-8 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
               >
-                <ExternalLink href={casteloContact.whatsappUrl}>
+                <ExternalLink href={unidades.castelo.whatsappUrl}>
                   <MessageCircle className="mr-2 size-5" aria-hidden="true" />
                   Falar com a secretaria
                 </ExternalLink>

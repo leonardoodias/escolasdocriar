@@ -3,10 +3,15 @@ import { ArrowRight, CalendarCheck, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/Section";
+import { ContatoDialog } from "@/components/site/ContatoDialog";
 import { ExternalLink } from "@/components/site/ExternalLink";
-import { whatsappLink } from "@/content/site";
+import { unidades, type UnidadeId } from "@/content/contatos";
 
-export function CtaMatriculas() {
+const botaoContatoClass =
+  "min-h-12 rounded-full border-white/60 bg-transparent px-6 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground";
+
+/** Sem `unidade`, o botão abre o modal com as duas unidades. */
+export function CtaMatriculas({ unidade }: { unidade?: UnidadeId }) {
   return (
     <section className="section">
       <Container>
@@ -38,17 +43,21 @@ export function CtaMatriculas() {
                   Agende uma visita
                 </Link>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="min-h-12 rounded-full border-white/60 bg-transparent px-6 font-bold text-primary-foreground hover:bg-white/15 hover:text-primary-foreground"
-              >
-                <ExternalLink href={whatsappLink}>
-                  <MessageCircle className="mr-2 size-5" aria-hidden="true" />
-                  Fale no WhatsApp
-                </ExternalLink>
-              </Button>
+              {unidade ? (
+                <Button asChild size="lg" variant="outline" className={botaoContatoClass}>
+                  <ExternalLink href={unidades[unidade].whatsappUrl}>
+                    <MessageCircle className="mr-2 size-5" aria-hidden="true" />
+                    Fale no WhatsApp
+                  </ExternalLink>
+                </Button>
+              ) : (
+                <ContatoDialog>
+                  <Button size="lg" variant="outline" className={botaoContatoClass}>
+                    <MessageCircle className="mr-2 size-5" aria-hidden="true" />
+                    Fale com a nossa equipe
+                  </Button>
+                </ContatoDialog>
+              )}
               <Button
                 asChild
                 size="lg"

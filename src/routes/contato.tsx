@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { UnidadesContato } from "@/components/site/ContatoDialog";
 import { Container, PageHero } from "@/components/site/Section";
-import { school, whatsappLink } from "@/content/site";
+import { school } from "@/content/site";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -31,7 +32,7 @@ function Contato() {
     <>
       <PageHero
         eyebrow="Contato"
-        title="Fale com a escola"
+        title="Fale com a nossa equipe"
         text="Estamos à disposição para tirar dúvidas, apresentar a proposta pedagógica e receber sua família para uma visita."
       />
 
@@ -39,34 +40,18 @@ function Contato() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
-              <ul className="space-y-5 text-sm">
+              <UnidadesContato titleAs="h2" />
+
+              <ul className="mt-8 space-y-5 text-sm">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
                   <span className="text-foreground/85">
+                    <strong className="font-semibold">Castelo do Criar</strong>
+                    <br />
                     {school.address.street}
                     <br />
                     {school.address.city} — {school.address.zip}
                   </span>
-                </li>
-                <li className="flex gap-3">
-                  <Phone className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
-                  <a href={school.phoneHref} className="font-semibold hover:text-primary">
-                    {school.phone}
-                  </a>
-                </li>
-                <li className="flex gap-3">
-                  <MessageCircle
-                    className="mt-0.5 size-5 shrink-0 text-accent"
-                    aria-hidden="true"
-                  />
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold hover:text-primary"
-                  >
-                    WhatsApp {school.whatsapp}
-                  </a>
                 </li>
                 <li className="flex gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
@@ -84,14 +69,6 @@ function Contato() {
               </ul>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button
-                  asChild
-                  className="min-h-12 rounded-full gradient-accent font-bold text-accent-foreground hover:opacity-90"
-                >
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    Falar pelo WhatsApp
-                  </a>
-                </Button>
                 <Button asChild variant="outline" className="min-h-12 rounded-full font-bold">
                   <a href={school.mapsDirections} target="_blank" rel="noopener noreferrer">
                     Ver rota no mapa
