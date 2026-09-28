@@ -13,10 +13,6 @@ export const school = {
   tagline: "Educar é criar possibilidades para o futuro.",
   description:
     "Escola de Educação Infantil, Ensino Fundamental e Ensino Médio em Santa Rosa de Viterbo/SP. Conhecimento, afeto e criatividade em cada etapa da vida escolar.",
-  phone: "(16) 99444-2252",
-  phoneHref: "tel:+5516994442252",
-  whatsapp: "(16) 99444-2252",
-  whatsappNumber: "5516994442252",
   email: "contato@castelodocriar.com.br",
   address: {
     street: "Rua Coronel Garcia, 158",
@@ -33,13 +29,6 @@ export const school = {
   mapsDirections:
     "https://www.google.com/maps/dir/?api=1&destination=Rua+Coronel+Garcia,+158,+Santa+Rosa+de+Viterbo,+Sao+Paulo,+14270-000",
 };
-
-export const whatsappMessage =
-  "Olá! Gostaria de conhecer melhor a Escola Castelo do Criar.";
-
-export const whatsappLink = `https://wa.me/${school.whatsappNumber}?text=${encodeURIComponent(
-  whatsappMessage,
-)}`;
 
 /** Menu principal simplificado */
 export const navLinks = [

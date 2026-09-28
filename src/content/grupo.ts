@@ -6,7 +6,9 @@
 
 import castelinhoImg from "@/assets/castelinho.jpg";
 import casteloImg from "@/assets/hero-escola.jpg";
-import logoCastelo3d from "@/assets/logo-castelo-3d.png.asset.json";
+import logoCastelinho from "@/assets/logo-castelinho.webp";
+import logoCastelo from "@/assets/logo-castelo.webp";
+import logoEscolasDoCriar from "@/assets/logo-escolas-do-criar.webp";
 
 export const grupo = {
   nome: "ESCOLAS DO CRIAR",
@@ -14,8 +16,8 @@ export const grupo = {
   descricao:
     "Educar com acolhimento, criatividade e desenvolvimento — do primeiro passo na escola até a formação para o futuro.",
   cidade: "Santa Rosa de Viterbo/SP",
-  /** Marca do grupo. Substitua quando houver logo próprio do grupo. */
-  logo: logoCastelo3d.url,
+  /** Logotipo institucional do grupo (fundo transparente). */
+  logo: logoEscolasDoCriar,
 };
 
 export type Escola = {
@@ -25,7 +27,7 @@ export type Escola = {
   faixa: string;
   resumo: string;
   descricao: string;
-  /** Logo 3D da escola. Deixe `null` até o asset ficar disponível. */
+  /** Logotipo oficial da escola. */
   logo: string | null;
   imagem: string;
   destaques: { title: string; text: string }[];
@@ -42,7 +44,7 @@ export const escolas: Escola[] = [
       "Um ambiente seguro e afetuoso para os primeiros anos, onde brincar é a principal forma de aprender.",
     descricao:
       "No Castelinho, cada criança encontra rotina previsível, cuidado atento e experiências que ampliam linguagem, movimento e imaginação.",
-    logo: null,
+    logo: logoCastelinho,
     imagem: castelinhoImg,
     destaques: [
       {
@@ -74,7 +76,7 @@ export const escolas: Escola[] = [
       "Formação sólida, projetos criativos e acompanhamento próximo no Ensino Fundamental I, Ensino Fundamental II e Ensino Médio.",
     descricao:
       "No Castelo do Criar, o conhecimento é construído com propósito: base acadêmica consistente, vivências práticas e uma equipe que conhece cada aluno pelo nome.",
-    logo: logoCastelo3d.url,
+    logo: logoCastelo,
     imagem: casteloImg,
     destaques: [
       {

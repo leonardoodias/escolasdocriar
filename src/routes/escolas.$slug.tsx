@@ -101,7 +101,7 @@ function EscolaPage() {
         </Container>
       </section>
 
-      <CtaMatriculas />
+      <CtaMatriculas unidade="castelinho" />
     </>
   );
 }

@@ -67,7 +67,7 @@ export function SegmentoPage({ segmento }: { segmento: Segmento }) {
         </Container>
       </section>
 
-      <CtaMatriculas />
+      <CtaMatriculas unidade={segmento.slug === "educacao-infantil" ? "castelinho" : "castelo"} />
     </>
   );
 }
