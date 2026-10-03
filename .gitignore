@@ -7,6 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# bun.lock is the project's reference lockfile; ignore lockfiles from other package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
 node_modules
 dist
 dist-ssr
