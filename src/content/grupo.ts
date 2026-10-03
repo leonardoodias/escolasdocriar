@@ -5,7 +5,7 @@
  */
 
 import castelinhoImg from "@/assets/castelinho.jpg";
-import casteloImg from "@/assets/hero-escola.jpg";
+import casteloImg from "@/assets/castelo-fachada.jpg";
 import logoCastelinho from "@/assets/logo-castelinho.webp";
 import logoCastelo from "@/assets/logo-castelo.webp";
 import logoEscolasDoCriar from "@/assets/logo-escolas-do-criar.webp";
