@@ -79,11 +79,11 @@ export const heroBanners: HeroBanner[] = [
     tag: "Campanha 2027",
     title: "Matrículas Abertas 2027",
     subtitle:
-      "Do Castelinho do Criar ao Castelo do Criar, acompanhamos cada etapa do desenvolvimento com afeto, propósito e formação de qualidade.",
+      "Uma Jornada: Do Castelinho ao Castelo do Criar, acompanhamos cada etapa do desenvolvimento com afeto, propósito e formação de qualidade.",
     escolasInfo: [
       {
         nome: "Castelinho do Criar",
-        segmento: "Primeira Infância",
+        segmento: "Berçário, MiniMaternal, Matternal, Nível I e Nível II",
       },
       {
         nome: "Castelo do Criar",
