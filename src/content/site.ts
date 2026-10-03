@@ -19,7 +19,7 @@ export const school = {
     city: "Santa Rosa de Viterbo, São Paulo",
     zip: "14270-000",
   },
-  hours: "Segunda a sexta, das 7h às 18h",
+  hours: "Segunda a sexta, das 7h às 17h",
   social: {
     instagram: "https://instagram.com/castelodocriar",
     facebook: "https://www.facebook.com/profile.php?id=61588620640733",

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/escolas/")({
       {
         name: "description",
         content:
-          "Conheça o Castelo do Criar e o Castelinho: duas escolas do grupo Escolas do Criar em Santa Rosa de Viterbo/SP.",
+          "Conheça o Castelo do Criar e o Castelinho do Criar: duas escolas do grupo Escolas do Criar em Santa Rosa de Viterbo/SP.",
       },
       { property: "og:title", content: "Nossas escolas — Escolas do Criar" },
       {

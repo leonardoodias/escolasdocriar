@@ -21,7 +21,7 @@ export function Header() {
         >
           <img
             src={grupo.logo}
-            alt="Escolas do Criar — Castelinho e Castelo"
+            alt="Escolas do Criar — Castelinho do Criar e Castelo do Criar"
             width={720}
             height={419}
             className="h-[3.75rem] w-auto sm:h-[4.5rem]"

@@ -10,15 +10,15 @@ import { PropositoSection } from "@/components/site/PropositoSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Escolas do Criar — Castelo do Criar e Castelinho" },
+      { title: "Escolas do Criar — Castelo do Criar e Castelinho do Criar" },
       {
         name: "description",
         content:
-          "Grupo Escolas do Criar em Santa Rosa de Viterbo/SP: Castelo do Criar e Castelinho. Educação com acolhimento, criatividade e desenvolvimento.",
+          "Grupo Escolas do Criar em Santa Rosa de Viterbo/SP: Castelo do Criar e Castelinho do Criar. Educação com acolhimento, criatividade e desenvolvimento.",
       },
       {
         property: "og:title",
-        content: "Escolas do Criar — Castelo do Criar e Castelinho",
+        content: "Escolas do Criar — Castelo do Criar e Castelinho do Criar",
       },
       {
         property: "og:description",

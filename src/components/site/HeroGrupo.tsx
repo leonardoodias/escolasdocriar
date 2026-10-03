@@ -52,10 +52,10 @@ export const heroBanners: HeroBanner[] = [
     subtitle:
       "Educar com acolhimento, criatividade e desenvolvimento — do primeiro passo na escola até a formação para o futuro.",
     image: heroImg,
-    imageAlt: "Escolas do Criar — Castelo do Criar e Castelinho",
+    imageAlt: "Escolas do Criar — Castelo do Criar e Castelinho do Criar",
     cardBadge: {
       eyebrow: "Escolas do Criar",
-      title: "Castelo do Criar & Castelinho",
+      title: "Castelo do Criar & Castelinho do Criar",
       ctaLabel: "Conhecer escolas",
       ctaTo: "/escolas",
     },
@@ -79,7 +79,7 @@ export const heroBanners: HeroBanner[] = [
     tag: "Campanha 2027",
     title: "Matrículas Abertas 2027",
     subtitle:
-      "Do Castelinho ao Castelo do Criar, acompanhamos cada etapa do desenvolvimento com afeto, propósito e formação de qualidade.",
+      "Do Castelinho do Criar ao Castelo do Criar, acompanhamos cada etapa do desenvolvimento com afeto, propósito e formação de qualidade.",
     escolasInfo: [
       {
         nome: "Castelinho do Criar",

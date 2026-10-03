@@ -34,7 +34,7 @@ export const destaques: Destaque[] = [
     tag: "Matrículas",
     titulo: "Matrículas 2027 abertas",
     texto:
-      "Garanta a vaga do seu filho no Castelo do Criar ou no Castelinho. Agende uma visita e conheça de perto.",
+      "Garanta a vaga do seu filho no Castelo do Criar ou no Castelinho do Criar. Agende uma visita e conheça de perto.",
     imagem: casteloImg,
     cta: { label: "Quero me matricular", to: "/matriculas" },
   },

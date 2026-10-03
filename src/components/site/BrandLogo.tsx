@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Marca visual reutilizável. Quando a escola ainda não tem logo (ex.: Castelinho),
+ * Marca visual reutilizável. Quando a escola ainda não tem logo (ex.: Castelinho do Criar),
  * exibimos um selo tipográfico elegante com as iniciais.
  */
 export function BrandLogo({

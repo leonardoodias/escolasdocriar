@@ -9,16 +9,16 @@ import { school } from "@/content/site";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Escola Castelo do Criar" },
+      { title: "Contato — Escolas do Criar" },
       {
         name: "description",
         content:
-          "Fale com a Escola Castelo do Criar: endereço na Rua Coronel Garcia, 158 — Centro, Santa Rosa de Viterbo/SP, telefone, WhatsApp e e-mail.",
+          "Fale com o Castelinho do Criar ou com a Escola Castelo do Criar, em Santa Rosa de Viterbo/SP: endereço, telefone, WhatsApp e horários de atendimento de cada unidade.",
       },
-      { property: "og:title", content: "Contato — Castelo do Criar" },
+      { property: "og:title", content: "Contato — Escolas do Criar" },
       {
         property: "og:description",
-        content: "Endereço, telefone, WhatsApp, e-mail e horários de atendimento.",
+        content: "Endereço, telefone, WhatsApp, e-mail e horários de atendimento de cada unidade.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -27,27 +27,76 @@ export const Route = createFileRoute("/contato")({
   component: Contato,
 });
 
+/** Endereço e mapa do Castelinho do Criar — mesmos dados usados no rodapé do site. */
+const castelinhoContato = {
+  nome: "Castelinho do Criar",
+  endereco: ["Av. São Paulo, 1381-1563", "Santa Rosa de Viterbo - SP", "CEP 14270-000"],
+  mapsEmbed:
+    "https://www.google.com/maps?q=Av.+Sao+Paulo,+1381-1563,+Santa+Rosa+de+Viterbo,+Sao+Paulo,+14270-000&output=embed",
+  mapsDirections:
+    "https://www.google.com/maps/dir/?api=1&destination=Av.+Sao+Paulo,+1381-1563,+Santa+Rosa+de+Viterbo,+Sao+Paulo,+14270-000",
+};
+
 function Contato() {
   return (
     <>
       <PageHero
         eyebrow="Contato"
         title="Fale com a nossa equipe"
-        text="Estamos à disposição para tirar dúvidas, apresentar a proposta pedagógica e receber sua família para uma visita."
+        text="Estamos à disposição para tirar dúvidas, apresentar a proposta pedagógica e receber sua família para uma visita — no Castelinho do Criar ou no Castelo do Criar."
       />
 
       <section className="section">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <UnidadesContato titleAs="h2" />
+          <UnidadesContato titleAs="h2" />
 
-              <ul className="mt-8 space-y-5 text-sm">
+          <div className="mt-12 grid gap-10 lg:grid-cols-2">
+            {/* Castelinho do Criar */}
+            <div className="flex flex-col">
+              <h3 className="font-display text-xl font-extrabold text-primary-deep">
+                {castelinhoContato.nome}
+              </h3>
+              <ul className="mt-5 space-y-5 text-sm">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
                   <span className="text-foreground/85">
-                    <strong className="font-semibold">Castelo do Criar</strong>
-                    <br />
+                    {castelinhoContato.endereco.map((linha) => (
+                      <span key={linha} className="block">
+                        {linha}
+                      </span>
+                    ))}
+                  </span>
+                </li>
+              </ul>
+
+              <div className="mt-6">
+                <Button asChild variant="outline" className="min-h-12 rounded-full font-bold">
+                  <a href={castelinhoContato.mapsDirections} target="_blank" rel="noopener noreferrer">
+                    Ver rota no mapa
+                  </a>
+                </Button>
+              </div>
+
+              <div className="mt-6 overflow-hidden rounded-4xl shadow-lift">
+                <iframe
+                  src={castelinhoContato.mapsEmbed}
+                  title="Mapa da localização do Castelinho do Criar"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-72 w-full border-0"
+                />
+              </div>
+            </div>
+
+            {/* Castelo do Criar */}
+            <div className="flex flex-col">
+              <h3 className="font-display text-xl font-extrabold text-primary-deep">
+                {school.shortName}
+              </h3>
+              <ul className="mt-5 space-y-5 text-sm">
+                <li className="flex gap-3">
+                  <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  <span className="text-foreground/85">
                     {school.address.street}
                     <br />
                     {school.address.city} — {school.address.zip}
@@ -55,10 +104,7 @@ function Contato() {
                 </li>
                 <li className="flex gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
-                  <a
-                    href={`mailto:${school.email}`}
-                    className="font-semibold hover:text-primary"
-                  >
+                  <a href={`mailto:${school.email}`} className="font-semibold hover:text-primary">
                     {school.email}
                   </a>
                 </li>
@@ -68,23 +114,23 @@ function Contato() {
                 </li>
               </ul>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6">
                 <Button asChild variant="outline" className="min-h-12 rounded-full font-bold">
                   <a href={school.mapsDirections} target="_blank" rel="noopener noreferrer">
                     Ver rota no mapa
                   </a>
                 </Button>
               </div>
-            </div>
 
-            <div className="overflow-hidden rounded-4xl shadow-lift">
-              <iframe
-                src={school.mapsEmbed}
-                title="Mapa da localização da Escola Castelo do Criar"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-80 w-full border-0 lg:h-full"
-              />
+              <div className="mt-6 overflow-hidden rounded-4xl shadow-lift">
+                <iframe
+                  src={school.mapsEmbed}
+                  title="Mapa da localização da Escola Castelo do Criar"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-72 w-full border-0"
+                />
+              </div>
             </div>
           </div>
         </Container>

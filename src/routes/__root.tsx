@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Grupo Escolas do Criar: Castelo do Criar e Castelinho, em Santa Rosa de Viterbo/SP.",
+          "Grupo Escolas do Criar: Castelo do Criar e Castelinho do Criar, em Santa Rosa de Viterbo/SP.",
       },
       { property: "og:site_name", content: "Escolas do Criar" },
       { property: "og:type", content: "website" },
@@ -110,10 +110,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "EducationalOrganization",
           name: "Escolas do Criar",
           description:
-            "Grupo educacional em Santa Rosa de Viterbo/SP formado pelas escolas Castelo do Criar e Castelinho.",
+            "Grupo educacional em Santa Rosa de Viterbo/SP formado pelas escolas Castelo do Criar e Castelinho do Criar.",
           subOrganization: [
             { "@type": "School", name: "Castelo do Criar" },
-            { "@type": "School", name: "Castelinho" },
+            { "@type": "School", name: "Castelinho do Criar" },
           ],
           address: {
             "@type": "PostalAddress",

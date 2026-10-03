@@ -38,12 +38,12 @@ export const escolas: Escola[] = [
   {
     slug: "castelinho",
     to: "/escolas/castelinho",
-    nome: "Castelinho",
-    faixa: "BERÇÁRIO • MATERNAL • NÍVEL I • NÍVEL II",
+    nome: "Castelinho do Criar",
+    faixa: "BERÇÁRIO • MINIMATERNAL • MATERNAL • NÍVEL I • NÍVEL II",
     resumo:
       "Um ambiente seguro e afetuoso para os primeiros anos, onde brincar é a principal forma de aprender.",
     descricao:
-      "No Castelinho, cada criança encontra rotina previsível, cuidado atento e experiências que ampliam linguagem, movimento e imaginação.",
+      "No Castelinho do Criar, cada criança encontra rotina previsível, cuidado atento e experiências que ampliam linguagem, movimento e imaginação.",
     logo: logoCastelinho,
     imagem: castelinhoImg,
     destaques: [
